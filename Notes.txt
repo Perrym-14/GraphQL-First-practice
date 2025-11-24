@@ -1,0 +1,7 @@
+3 different ways to implementing GraphSQL server
+    - Annotation: Use C# Attributes
+    - Code-first
+    - Schema-first
+
+  - In both annotation and code-first apporaches, we only write resolvers. The schema gets automatically generated. The C# type system and GraphQL make this possible
+  -   

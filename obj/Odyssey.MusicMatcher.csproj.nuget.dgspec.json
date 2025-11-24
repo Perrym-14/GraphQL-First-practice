@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/perrym14/VS Code/MusicMatch Project/MusicMatchProject/Odyssey.MusicMatcher.csproj": {}
+    "C:\\git\\GraphSQL-practice\\GraphQL-First-practice\\Odyssey.MusicMatcher.csproj": {}
   },
   "projects": {
-    "/Users/perrym14/VS Code/MusicMatch Project/MusicMatchProject/Odyssey.MusicMatcher.csproj": {
+    "C:\\git\\GraphSQL-practice\\GraphQL-First-practice\\Odyssey.MusicMatcher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/perrym14/VS Code/MusicMatch Project/MusicMatchProject/Odyssey.MusicMatcher.csproj",
+        "projectUniqueName": "C:\\git\\GraphSQL-practice\\GraphQL-First-practice\\Odyssey.MusicMatcher.csproj",
         "projectName": "Odyssey.MusicMatcher",
-        "projectPath": "/Users/perrym14/VS Code/MusicMatch Project/MusicMatchProject/Odyssey.MusicMatcher.csproj",
-        "packagesPath": "/Users/perrym14/.nuget/packages/",
-        "outputPath": "/Users/perrym14/VS Code/MusicMatch Project/MusicMatchProject/obj/",
+        "projectPath": "C:\\git\\GraphSQL-practice\\GraphQL-First-practice\\Odyssey.MusicMatcher.csproj",
+        "packagesPath": "C:\\Users\\35486\\.nuget\\packages\\",
+        "outputPath": "C:\\git\\GraphSQL-practice\\GraphQL-First-practice\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/perrym14/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\35486\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +49,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[13.8.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
