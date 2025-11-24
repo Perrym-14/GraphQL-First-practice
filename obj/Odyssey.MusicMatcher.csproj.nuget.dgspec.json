@@ -53,6 +53,10 @@
             "HotChocolate.AspNetCore": {
               "target": "Package",
               "version": "[13.8.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
             }
           },
           "imports": [

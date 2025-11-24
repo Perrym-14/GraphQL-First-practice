@@ -1,6 +1,7 @@
 using System;
+using SpotifyWeb;
 
-namespace Odyssey.MusicMatcher.Types;
+namespace Odyssey.MusicMatcher;
 [GraphQLDescription("A curated collection of tracks designed for a specifc mood or activity.")]
 public class Playlist
 {
@@ -16,5 +17,12 @@ public class Playlist
     {
         Id = id;
         Name = name;
+    }
+
+    public Playlist(PlaylistSimplified simPlaylist)
+    {
+        Id = simPlaylist.Id;
+        Name = simPlaylist.Name;
+        Description = simPlaylist.Description;
     }
 }

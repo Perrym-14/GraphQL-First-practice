@@ -85,3 +85,4 @@ C:\git\GraphSQL-practice\GraphQL-First-practice\bin\Debug\net9.0\System.IO.Hashi
 C:\git\GraphSQL-practice\GraphQL-First-practice\bin\Debug\net9.0\Yarp.ReverseProxy.dll
 C:\git\GraphSQL-practice\GraphQL-First-practice\obj\Debug\net9.0\Odyssey.MusicMatcher.csproj.AssemblyReference.cache
 C:\git\GraphSQL-practice\GraphQL-First-practice\obj\Debug\net9.0\Odyssey..279EB9F3.Up2Date
+C:\git\GraphSQL-practice\GraphQL-First-practice\bin\Debug\net9.0\Newtonsoft.Json.dll

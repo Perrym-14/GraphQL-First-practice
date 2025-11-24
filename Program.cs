@@ -1,11 +1,15 @@
 using Odyssey.MusicMatcher;
 using Odyssey.MusicMatcher.Types;
+using SpotifyWeb;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHttpClient<SpotifyService>();
+
 builder.Services.AddGraphQLServer()
     .AddQueryType<Query>()
-    .AddType<Playlist>()
-    .AddType<Artist>();
+    .RegisterService<SpotifyService>();
+
 builder.Services
     .AddCors(options =>
     {

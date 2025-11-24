@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Odyssey.MusicMatcher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d916d17847b63d0a35a24e0dcd5ced185925561")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11ecde29b7450cce79b922fa3571bb47dbaf8a88")]
 [assembly: System.Reflection.AssemblyProductAttribute("Odyssey.MusicMatcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Odyssey.MusicMatcher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
