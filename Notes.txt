@@ -13,3 +13,8 @@
 
 - Resolver chains
     - 
+
+Advantages over REST
+    - Keeps n+1 events in the server, not the client.
+    - Avoid making a call with a relatively large response, just to discard what you don't need. The effects can be costly, especially if the client app has slow netowrk speeds.
+    - REST api would have to make multiple back and forth calls from client <=> server, when doing a sequence of operations to get all necessary data.
