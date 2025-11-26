@@ -7,3 +7,9 @@
   - Just typing to look busy. Need to take a small little break
 
   Behind the scenes, Hot Chocolate converts get accessors to resolvers.
+
+  - Think about using href pattern to avoid large responses
+    - The href will point to endpoint that contains more detailed info if needed.
+
+- Resolver chains
+    - 

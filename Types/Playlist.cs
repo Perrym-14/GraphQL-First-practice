@@ -13,7 +13,7 @@ public class Playlist
     [GraphQLDescription("The text describing what the playlist is.")]
     public string? Description { get; set; }
     [GraphQLDescription("Collection of individual music tracks.")]
-    public List<Track> Tracks { get; set; }
+    private List<Track>? _tracks;
 
     public Playlist(string id, string name)
     {
@@ -26,6 +26,8 @@ public class Playlist
         Id = simPlaylist.Id;
         Name = simPlaylist.Name;
         Description = simPlaylist.Description;
+
+        //Could call endpoint here but if we did, then we would ALWAYS call the endpoint to get full information, even if we don't want to.
     }
 
     public Playlist(SpotifyWeb.Playlist obj) 
@@ -33,6 +35,20 @@ public class Playlist
         Id = obj.Id;
         Name = obj.Name;
         Description = obj.Description;
-        Tracks = [..  obj.Tracks.Items.Select(x => new Track(x.Track))];
+        _tracks = [..  obj.Tracks.Items.Select(x => new Track(x.Track))];
+    }
+
+        public async Task<List<Track>> Tracks(SpotifyWeb.SpotifyService spotifyService, [Parent] Playlist parent)
+    {
+        if (_tracks != null)
+        {
+            return _tracks;
+        }
+
+        else
+        {
+            var response = await spotifyService.GetPlaylistsTracksAsync(parent.Id);
+            return [..  response.Items.Select(x => new Track(x.Track))];
+        }
     }
 }
