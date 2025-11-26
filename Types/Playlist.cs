@@ -1,5 +1,5 @@
 using System;
-using SpotifyWeb;
+using Odyssey.MusicMatcher.Types;
 
 namespace Odyssey.MusicMatcher;
 [GraphQLDescription("A curated collection of tracks designed for a specifc mood or activity.")]
@@ -12,6 +12,8 @@ public class Playlist
     public string Name { get; set; }
     [GraphQLDescription("The text describing what the playlist is.")]
     public string? Description { get; set; }
+    [GraphQLDescription("Collection of individual music tracks.")]
+    public List<Track> Tracks { get; set; }
 
     public Playlist(string id, string name)
     {
@@ -19,7 +21,7 @@ public class Playlist
         Name = name;
     }
 
-    public Playlist(PlaylistSimplified simPlaylist)
+    public Playlist(SpotifyWeb.PlaylistSimplified simPlaylist)
     {
         Id = simPlaylist.Id;
         Name = simPlaylist.Name;
@@ -31,5 +33,6 @@ public class Playlist
         Id = obj.Id;
         Name = obj.Name;
         Description = obj.Description;
+        Tracks = [..  obj.Tracks.Items.Select(x => new Track(x.Track))];
     }
 }

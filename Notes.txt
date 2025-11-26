@@ -5,3 +5,5 @@
 
   - In both annotation and code-first apporaches, we only write resolvers. The schema gets automatically generated. The C# type system and GraphQL make this possible
   - Just typing to look busy. Need to take a small little break
+
+  Behind the scenes, Hot Chocolate converts get accessors to resolvers.
