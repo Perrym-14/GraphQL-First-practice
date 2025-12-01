@@ -13,6 +13,20 @@ public class Playlist
     [GraphQLDescription("The text describing what the playlist is.")]
     public string? Description { get; set; }
     [GraphQLDescription("Collection of individual music tracks.")]
+
+    public async Task<List<Track>> Tracks(SpotifyWeb.SpotifyService spotifyService, [Parent] Playlist parent)
+    {
+        if (_tracks != null)
+        {
+            return _tracks;
+        }
+
+        else
+        {
+            var response = await spotifyService.GetPlaylistsTracksAsync(parent.Id);
+            return [..  response.Items.Select(x => new Track(x.Track))];
+        }
+    }
     private List<Track>? _tracks;
 
     public Playlist(string id, string name)
@@ -36,19 +50,5 @@ public class Playlist
         Name = obj.Name;
         Description = obj.Description;
         _tracks = [..  obj.Tracks.Items.Select(x => new Track(x.Track))];
-    }
-
-        public async Task<List<Track>> Tracks(SpotifyWeb.SpotifyService spotifyService, [Parent] Playlist parent)
-    {
-        if (_tracks != null)
-        {
-            return _tracks;
-        }
-
-        else
-        {
-            var response = await spotifyService.GetPlaylistsTracksAsync(parent.Id);
-            return [..  response.Items.Select(x => new Track(x.Track))];
-        }
     }
 }
